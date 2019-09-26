@@ -3,12 +3,12 @@
     </head>
 
     <body>
-        <canvas id="paint" width="200px" height="200px" style="border: 2px solid black;"></canvas>
-        <button onclick="javascript:clearArea();return false;">Clear</button>
+        <canvas id="paint" width="100px" height="100px" style="border: 1px solid black;"></canvas>
+        <button id="clearbutton">Clear</button>
         <p>Predicted Value: <input type="text" id="prediction" value="" readonly></p>
-        <p>Predicted Confidence: <input type="text" id="confidence" value="" readonly></p>
         
     </body>
     <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
     <script src="{{url_for('static', filename='draw.js')}}"></script>
+    <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.4.0/fabric.min.js'></script>
 </html>

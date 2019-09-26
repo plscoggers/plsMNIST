@@ -44,7 +44,7 @@ def run(model,train_data,test_data,optimize,cuda=False,n_epochs=3):
 
 
 if __name__ == '__main__':
-    trans = transforms.Compose([transforms.ToTensor()]) #I'm skipping normalizing because these images are small and converge fast anyway
+    trans = transforms.Compose([transforms.Grayscale(), transforms.ToTensor()]) #I'm skipping normalizing because these images are small and converge fast anyway
     mnist_train_dataset = datasets.MNIST('datasets',train=True,download=True,transform=trans)
     mnist_test_dataset = datasets.MNIST('datasets',train=False,download=True,transform=trans)
 

@@ -1,5 +1,5 @@
-*.pt
 datasets/MNIST
 models/__pycache__
 .vscode
 utils
+*.pt
