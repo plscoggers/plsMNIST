@@ -39,7 +39,7 @@ def run(model,train_data,test_data,optimize,cuda=False,n_epochs=3):
         print('Epoch {} Starting'.format(i + 1))
         train(model,train_data,optimize,cuda)
         test(model,test_data,cuda)
-        torch.save(model.state_dict(), 'models/mnist_train_epoch_{}.pt'.format(i + 1))
+        torch.save(model, 'models/mnist_train_epoch_{}.pt'.format(i + 1))
 
 
 
