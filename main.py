@@ -14,7 +14,7 @@ from torchvision import models
 import torch
 import torchvision.transforms as transforms
 from torch.nn import functional as F
-from PIL import Image
+from PIL import Image, ImageOps
 import base64
 
 app = Flask(__name__)
@@ -45,13 +45,15 @@ def transform_image(image_bytes):
     image = Image.open(io.BytesIO(image_bytes))
     image = remove_transparency(image)
     image = image.resize((64,64), Image.ANTIALIAS)
-    image = image.convert('LA')
+    image = ImageOps.grayscale(image)
+    image = ImageOps.invert(image)
     return trans(image).unsqueeze(0)
 
 def get_prediction(image_bytes):
     tensor = transform_image(image_bytes=image_bytes)
     tensor = tensor.cuda()
     outputs = model.forward(tensor)
+    print(outputs)
     _, y_hat = outputs.max(1)
     return y_hat.item(), 1
 

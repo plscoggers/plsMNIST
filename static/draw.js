@@ -6,7 +6,7 @@ var drawStarted = false;
 jQuery(document).ready(function() {
     var canvas = document.getElementById('paint');
     var ctx = canvas.getContext('2d');
-    ctx.lineWidth = 30;
+    ctx.lineWidth = 5;
     var offset = jQuery('#paint').offset()
 
     var intervalID = window.setInterval(predictImage, 5000);
