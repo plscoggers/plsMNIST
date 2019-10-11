@@ -1,3 +1,10 @@
+## Update - 12/10/19
+I have created, with a smaller style model, created a heroku app so you can play with this without having to download and do all that stuff!
+
+https://mnist-pytorch-test.herokuapp.com/
+
+The website has mixed results on mobile.  I could fix positions a bit better.
+
 ## plsMNIST
 This is a short sample of working in PyTorch
 
