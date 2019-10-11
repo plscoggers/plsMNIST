@@ -1,5 +1,5 @@
 ## Update - 12/10/19
-I have created, with a smaller style model, created a heroku app so you can play with this without having to download and do all that stuff!
+I have, with a smaller style model, created a heroku app so you can play with this without having to download and do all that stuff!
 
 https://mnist-pytorch-test.herokuapp.com/
 
