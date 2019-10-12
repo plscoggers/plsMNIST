@@ -1,6 +1,8 @@
 ## Update - 12/10/19
 I have, with a smaller style model, created a heroku app so you can play with this without having to download and do all that stuff!
 
+Since I'm using free tier, it sleeps after 30 minutes.  It may take a minute to load the website depending on if it's sleeping or not.
+
 https://mnist-pytorch-test.herokuapp.com/
 
 The website has mixed results on mobile.  I could fix positions a bit better.
